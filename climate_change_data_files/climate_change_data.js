@@ -104,3 +104,89 @@ const config = {
 };
 
 const climate_data_chart = new Chart(ctx, config);
+
+
+const config_ppm = {
+    type: "line",
+    data: {
+        labels: ["800,000", "400,000", "200,000", "100,000", "50,000", "25,000", "5,000", "2,500", "1,000", "900", "800", "700", "600", "500", "400", "300", "200", "100", "50", "25", "0"],
+        datasets: [{
+            label: "carbon dioxide level (parts per million)",
+            fill: true,
+            backgroundColor: orange_gradient,
+            borderColor: orange_gradient,
+            data: [188, 283, 239, 226, 210, 192, 269, 278, 279.7, 283.2, 282.8, 283.3, 280.7, 283.1, 275.3, 277, 284.2, 303.4, 327.44, 364.35, 415.52]
+        }]
+    },
+    options: {
+        plugins: {
+            title: {
+                display: true,
+                text: "Global C02 Levels",
+                color: orange_gradient,
+                font: {
+                    size: 15,
+                    weight: 600
+                }
+            },
+            legend: {
+                display: false,
+                labels: {
+                    color: `rgba(160, 224, 183, 0.75)`,
+                    font: {
+                        size: 15
+                    }
+                }
+            },
+        },
+        scales: {
+            y: {
+                min: 160,
+                max: 440,
+                title: {
+                    display: true,
+                    text: "CO2 (parts per million)",
+                    color: orange_gradient,
+                    font: {
+                        size: 18
+                    }
+                },
+                grid: {
+                    borderWidth: 3,
+                    color: `rgba(160, 224, 183, 0.75)`
+                },
+                ticks: {
+                    color: `rgba(160, 224, 183, 0.75)`,
+                    font: {
+                        size: 14
+                    }
+                }
+            },
+            
+            x: {
+                title: {
+                    display: true,
+                    text: "years before today (0 = 2021)",
+                    color: orange_gradient,
+                    font: {
+                        size: 18
+                    }
+                },
+                grid: {
+                    color: `rgba(160, 224, 183, 0.75)`
+                },
+                ticks: {
+                    color: `rgba(160, 224, 183, 0.75)`,
+                    font: {
+                        size: 14
+                    }
+                }
+            }
+        }
+    }
+}
+
+const co2_ppm_data_chart = new Chart(
+    document.getElementById("co2-ppm-chart").getContext("2d"),
+    config_ppm
+);
