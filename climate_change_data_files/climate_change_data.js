@@ -106,6 +106,10 @@ const config = {
 const climate_data_chart = new Chart(ctx, config);
 
 
+let blueish_gradient = document.getElementById("co2-ppm-chart").getContext("2d").createLinearGradient(0, 0, 0, 400);
+blueish_gradient.addColorStop(0, `rgba(58, 123, 213, 1)`);
+blueish_gradient.addColorStop(1, `rgba(0, 210,  255, 0.4)`);
+
 const config_ppm = {
     type: "line",
     data: {
@@ -113,8 +117,8 @@ const config_ppm = {
         datasets: [{
             label: "carbon dioxide level (parts per million)",
             fill: true,
-            backgroundColor: orange_gradient,
-            borderColor: orange_gradient,
+            backgroundColor: blueish_gradient,
+            borderColor: blueish_gradient,
             data: [188, 283, 239, 226, 210, 192, 269, 278, 279.7, 283.2, 282.8, 283.3, 280.7, 283.1, 275.3, 277, 284.2, 303.4, 327.44, 364.35, 415.52]
         }]
     },
@@ -123,7 +127,7 @@ const config_ppm = {
             title: {
                 display: true,
                 text: "Global C02 Levels",
-                color: orange_gradient,
+                color: blueish_gradient,
                 font: {
                     size: 15,
                     weight: 600
@@ -146,7 +150,7 @@ const config_ppm = {
                 title: {
                     display: true,
                     text: "CO2 (parts per million)",
-                    color: orange_gradient,
+                    color: blueish_gradient,
                     font: {
                         size: 18
                     }
@@ -167,7 +171,7 @@ const config_ppm = {
                 title: {
                     display: true,
                     text: "years before today (0 = 2021)",
-                    color: orange_gradient,
+                    color: blueish_gradient,
                     font: {
                         size: 18
                     }
