@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+}
+
+/* body {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.left-side {
+    background-color: black;
+    width: 20%;
+    height: 100vh;
+}
+
+.left-side p {
+    color: goldenrod;
+    font-family: 'Nunito', sans-serif;
+}
+
+.right-side {
+    background: url(../media/green\ blue\ gradient.png) no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+}
+
+.chart {
+    width: 800px;
+    height: 400px;
+    margin-top: 100px;
+    background-color: rgba(8, 12, 20, 0.877);
+    border-radius: 2em;
+    padding: 2px 1em 1em 1em;
+}
+
+
+.caption-container {
+    width: 1000px;
+    height: 500px;
+    background-color: rgba(8, 12, 20, 0.877);
+    margin-top: 100px;
+    border-radius: 2em;
+}
+
+.heading-container {
+    width: 5vw;
+    height: 10vh;
+    position: absolute;
+
+}
+
+
+.top-word {
+    width: 40px;
+    font-size: 20px;
+}
+
+.bottom-word {
+    margin-left: 50px;
+    width: 40px;
+    font-size: 40px;
+}  */
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.intro {
+    width: 100vw;
+    height: 800px;
+    background-color: black;
+    padding-top: 200px;
+}
+
+.heading-container {
+    color: goldenrod;
+    max-width: 500px;
+    height: 100px;
+    text-align: center;
+    margin: 0 auto 0 auto;
+    
+}
+
+.heading {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 80px;
+}
+
+.heading-subtext {
+    font-family: 'Nunito', sans-serif;
+    font-size: 40px;
+    font-style: italic;
+}
+
+.second-part-page {
+    background: url(../media/green\ blue\ gradient.png) no-repeat;
+    object-fit: cover;
+    background-size: cover;
+    padding: 30px;
+    height: 100vh;
+}
+
+.chart-container {
+    margin: auto;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chart {
+    width: 50vw;
+    min-width: 400px;
+    max-width: 800px;
+    max-height: 400px;
+    background-color: rgba(8, 12, 20, 0.877);
+    border-radius: 1em;
+    padding: 0.5em 1.5em 1.5em 1em;
+    margin-top: 70px;
+    overflow: hidden;
+}
+
+
+.caption-container {
+    width: 50vw;
+    min-width: 400px;
+    max-height: 400px;
+    max-width: 800px;
+    background-color: rgba(8, 12, 20, 0.877);
+    margin-top: 30px;
+    border-radius: 1em;
+    text-align: left;
+    color: white;
+    padding: 1em;
+}
+
+.caption-container p {
+    margin: 0 auto 0 auto;
+    max-width: 700px;
+    font-family: "Poppins", sans-serif;
+    color: beige;
+}

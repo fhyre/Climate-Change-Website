@@ -1,0 +1,202 @@
+:root {
+    --text-color: hsla(210, 50%, 85%, 1);
+    --shadow-color: rgba(51, 106, 161, 0.4);
+    --btn-color: hsla(210, 87%, 45%, 0.521);
+    --bg-color: #141218;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.video-background {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+}
+
+.ocean-heading {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.ocean-heading h1 {
+    margin: 0;
+    font-size: 80px;
+    letter-spacing: .05em;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Seaweed Script", "Poppins", sans-serif;
+    color: aquamarine;
+    text-shadow:2px 2px black;
+}
+
+.ocean-heading p {
+    font-size: 30px;
+    margin-top: 50px;
+    font-family: "Sora", sans-serif;
+    color: #023e8a;
+    text-shadow: 0 0 10px rgba(255, 217, 0, 0.575);
+    max-height: 150px;
+}
+
+.ocean-heading div {
+    height: 100px;
+}
+
+.fade-in-type {
+    animation: fadeIn ease 5s, typing 3s steps(40, end);
+    -webkit-animation: fadeIn ease 5s, typing 3s steps(40, end);
+    letter-spacing: .05em;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    display: none;
+}
+
+.fade-in-only {
+    animation: fadeIn ease 5s;
+    -webkit-animation: fadeIn ease 5s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0 }
+    100% { opacity:  1 }
+}
+
+@-webkit-keyframes fadeIn {
+    0% { opacity: 0 }
+    100% { opacity:  1 }
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@-webkit-keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* @keyframes hoverUpDown {
+    0%, 100% { bottom: 0 }
+    50% { bottom: 10px }
+}
+
+@-webkit-keyframes hoverUpDown {
+    0%, 100% { bottom: 0 }
+    50% { bottom: 10px }
+} */
+
+button {
+    position:relative;
+    padding: 10px 20px;  
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: 900;
+    font-size: 30px;  
+    color: var(--text-color);
+    background-color: var(--btn-color);
+    box-shadow: var(--shadow-color) 2px 2px 22px;
+    border-radius: 10px; 
+    overflow: hidden;   
+    margin-top: 130px;
+}
+  
+button:focus {
+    outline-color: transparent;
+    box-shadow: var(--btn-color) 2px 2px 22px;
+}
+
+.right::after, button::after {
+    content: var(--content);
+    display: block;
+    position: absolute;
+    white-space: nowrap;
+    padding: 40px 40px;
+    pointer-events:none;
+}
+
+button::after{
+    font-weight: 200;
+    top: -30px;
+    left: -20px;
+} 
+
+.right, .left {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.right {
+    left: 66%;
+}
+
+.left {
+    right: 66%;
+}
+
+.right::after {
+    top: -30px;
+    left: calc(-66% - 20px);
+
+    background-color: var(--bg-color);
+    color: transparent;
+    transition: transform .4s ease-out;
+    transform: translate(0, -90%) rotate(0deg);
+}
+
+/* button:hover .right::after {
+    transform: translate(0, -47%) rotate(0deg);
+}
+
+button .right:hover::after {
+    transform: translate(0, -50%) rotate(-7deg);
+}
+
+button .left:hover ~ .right::after {
+    transform: translate(0, -50%) rotate(7deg);
+} */
+
+/* bubbles */
+button::before {
+    content: '';
+    pointer-events: none;
+    opacity: .6;
+    background:
+        radial-gradient(circle at 20% 35%,  transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+        radial-gradient(circle at 75% 44%, transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+        radial-gradient(circle at 46% 52%, transparent 0, transparent 4px, var(--text-color) 5px, var(--text-color) 6px, transparent 6px);
+
+    width: 100%;
+    height: 300%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    animation: bubbles 5s linear infinite both;
+}
+
+@keyframes bubbles {
+    from {
+        transform: translate();
+    }
+    to {
+        transform: translate(0, -66.666%);
+    }
+}

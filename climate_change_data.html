@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./climate_change_data_files/climate_change_data.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet"> 
+    <title>Data</title>
+</head>
+<body>
+    
+    <div class="intro">
+        <div class="heading-container">
+            <p class="heading">The Data</p>
+            <p class="heading-subtext">Why does this matter?</p>
+        </div>
+    </div>
+
+
+    <div class="second-part-page">
+        <div class="chart-container">
+            <div class="chart">
+                <canvas id="data-chart"></canvas>
+            </div>
+        
+            <div class="caption-container">
+                <p>
+                    From the graph, we can see that the baseline mean is 0 Celsius. 
+                    Between 1880 and 1930, the mean temperature, per 10 years, is actual below the mean. 
+                    At around the turn of the mid-1900s, the average mean temperature starts deviate and eventually, 
+                    grows rapidly to the highest peak in 2016. 
+                </p>
+            </div>
+        </div>
+            
+    </div>
+      
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./climate_change_data_files/climate_change_data.js"></script>
+</body>
+</html>
