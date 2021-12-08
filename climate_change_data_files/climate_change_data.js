@@ -25,6 +25,7 @@ const labels = [
 const data = {
     labels: labels,
     datasets: [{
+        fill: true,
         label: "Celsius Deviation From Baseline",
         backgroundColor: orange_gradient,
         borderColor: orange_gradient,
