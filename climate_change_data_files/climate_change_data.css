@@ -126,11 +126,6 @@ ul {
     margin-top: 0;
 }
 
-.click-to-find-out {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
 .footer-info-container button {
     border-radius: 2em;
     background-image: linear-gradient(to bottom, black 50%, goldenrod 50%);
