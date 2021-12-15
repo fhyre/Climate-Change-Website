@@ -1,0 +1,223 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #000000;
+    background-image: linear-gradient(147deg, #000000 0%, #04619f 74%);
+    object-fit: cover;
+    background-size: cover;
+    min-height: 100vh;
+    overflow: auto;
+    font-family: "Poppins", sans-serif;
+    padding: 1px;
+}
+
+h1 {
+    font-family: "Seaweed Script", "Poppins", sans-serif;
+    color: aquamarine;
+    text-shadow:2px 2px black;
+    margin: 40px auto;
+    max-width: 500px;
+    text-align: center;
+    font-size: 70px;
+}
+
+.directions-container {
+    max-width: 800px;
+    margin: 100px auto 0 auto;
+}
+
+.directions {
+    text-align: center;
+    color: beige;
+    font-size: 30px; 
+    font-family: 'Merienda', cursive;
+    animation: fadeIn 3s;
+}
+
+.content {
+    max-width: 800px;
+    margin: 60px auto;
+    min-height: 300px;
+    /* background-color: rgba(9, 10, 9, 0.541); */
+    /* border-radius: 1em; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+} 
+ 
+.img-design {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: margin-top 0.2s ease-in-out;
+    animation: fadeIn 6s;
+}
+
+.img-design:hover {
+    cursor: pointer;
+    margin-top: -50px;
+}
+
+.modal-container {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.modal-content-window {
+    display: none;
+    width: 1000px;
+    height: 550px;
+    margin: 140px auto;
+    background-color: #b1bfd8;
+    background-image: linear-gradient(315deg, #b1bfd8 0%, #6782b4 74%);
+    border-radius: 1em;
+    animation: fadeInCard 1s;
+    overflow: auto;
+}
+
+.tab-on-top {
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    display: flex;
+}
+
+.tab-on-top h2 {
+    font-family: 'Merienda', cursive;
+    font-size: 30px;
+    margin: 5px 0 0 36%;
+    width: 300px;
+    text-align: center;
+    color: #2b2d42;
+    border-bottom: 1px solid #2b2d42;
+    animation: fadeIn 3s;
+}
+
+
+.exit-button {
+    width: 5%;
+    height: 30px;
+    display: inline-block;
+}
+
+.exit-button:hover {
+    cursor: pointer;
+}
+
+.title-container {
+    width: 95%
+}
+
+.bigger-img-container {
+    width: 300px;
+    margin: auto;
+}
+
+.bigger-img-container img {
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    animation: fadeIn 5s;
+    margin-top: 20px;
+}
+
+.animal-info-container {
+    width: 850px;
+    height: 500px;
+    /* background-color: rgba(0, 0, 0, 0.466); */
+    margin: 30px auto;
+    animation: fadeIn 3s;
+    padding: 10px;
+    border-radius: 1em;
+    display: flex;
+}
+
+.left-side {
+    width: 40%;
+    height: 100%;
+    /* background-color: skyblue; */
+    font-family: 'Baloo 2', cursive;
+}
+
+.right-side {
+    width: 60%;
+    height: 100%;
+    background-color: #5078f2;
+    background-image: linear-gradient(315deg, #5078f2 0%, #efe9f4 74%);
+    margin-left: 20px;
+    font-family: 'Baloo 2', cursive;
+    border-radius: 1em;
+    overflow: auto;
+} 
+
+.basic-information {
+    width: 100%;
+    height: 50%;
+    background-color: #5078f2;
+    background-image: linear-gradient(315deg, #5078f2 0%, #efe9f4 74%);
+    padding-top: 10px;
+    border-radius: 1em;
+    overflow: auto;
+}
+
+.basic-information h3 {
+    width: 90px;
+}
+
+h3 {
+    font-family: 'Merienda', cursive;
+    width: 125px;
+    text-align: center;
+    margin: auto;
+    color: #2b2d42;
+    border-bottom: 1px solid #2b2d42;
+}
+
+.all-info {
+    padding: 0 20px;
+}
+
+.pre-def {
+    color: darkblue;
+    font-weight: bolder;
+}
+
+.video-frame {
+    width: 100%;
+    height: 45%;
+    border-radius: 1em;
+    overflow: hidden;
+    margin-top: 23.5px;
+}
+
+.impact-in-depth-info {
+    padding-top: 10px;
+}
+
+.main-impact {
+    padding: 20px;
+    font-size: 16px;
+}
+
+@keyframes fadeInCard {
+    from { margin-top: -300px; opacity: 0 }
+    to { margin-top: 140px; opacity: 1 }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0;}
+    to { opacity: 1;}
+}
